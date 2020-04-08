@@ -121,13 +121,15 @@
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="github/hentaiOS" />
   <project path="hardware/interfaces" name="platform_hardware_interfaces" groups="pdk" remote="github/hentaiOS" />
   <project path="hardware/libhardware" name="platform_hardware_libhardware" groups="pdk" remote="github/hentaiOS" />
-  <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="github/hentaiOS" >
+  <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="github/LineageOS" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- for AOSP sdm845 and sm8150, we override os_pickup.mk -->
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
     <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" /> 
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
@@ -184,6 +186,9 @@
   <project path="hardware/qcom-caf/msm8998/audio" name="android_hardware_qcom_audio" revision="lineage-17.1-caf-msm8998" remote="github/LineageOS" />
   <project path="hardware/qcom-caf/msm8998/display" name="android_hardware_qcom_display" revision="lineage-17.1-caf-msm8998" remote="github/LineageOS" />
   <project path="hardware/qcom-caf/msm8998/media" name="android_hardware_qcom_media" revision="lineage-17.1-caf-msm8998" remote="github/LineageOS" />
+  <project path="hardware/qcom-caf/msm8996/audio" name="android_hardware_qcom_audio" revision="lineage-17.1-caf-msm8996" remote="github/LineageOS" /> 
+  <project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" revision="lineage-17.1-caf-msm8996" remote="github/LineageOS" /> 
+  <project path="hardware/qcom-caf/msm8996/media" name="android_hardware_qcom_media" revision="lineage-17.1-caf-msm8996" remote="github/LineageOS" />
   <project path="hardware/qcom-caf/sdm845/audio" name="android_hardware_qcom_audio" revision="lineage-17.1-caf-sdm845" remote="github/LineageOS" />
   <project path="hardware/qcom-caf/sdm845/display" name="android_hardware_qcom_display" revision="lineage-17.1-caf-sdm845" remote="github/LineageOS" />
   <project path="hardware/qcom-caf/sdm845/media" name="android_hardware_qcom_media" revision="lineage-17.1-caf-sdm845" remote="github/LineageOS" />
